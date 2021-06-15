@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.beecp.starter.demo.map2.UserInfo2Mapper">
+
+    <resultMap id="UserInfo2" type="cn.beecp.starter.demo.map2.UserInfo2">
+        <result column="USER_ID" jdbcType="INTEGER" property="userId"/>
+        <result column="USER_NAME" jdbcType="VARCHAR" property="userName"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="UserInfo2">
+        select * from TEST_USER2
+    </select>
+
+    <select id="findAll2" resultMap="UserInfo2">
+        select * from TEST_USER3
+    </select>
+</mapper>
